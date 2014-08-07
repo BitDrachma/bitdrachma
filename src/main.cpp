@@ -967,7 +967,7 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
     int64_t nSubsidy = 1 * COIN;
-    if(pindexBest->nHeight < 2000)
+
   
 	
     if (fDebug && GetBoolArg("-printcreation"))
@@ -993,7 +993,7 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
     return nSubsidy + nFees;
 }
 
-static const int64_t nTargetTimespan = 1 * 60;  // 10 mins
+static const int64_t nTargetTimespan = 10 * 60;  // 10 mins
 //
 // maximum nBits value could possible be required nTime after
 //
@@ -2482,9 +2482,9 @@ bool LoadBlockIndex(bool fAllowNew)
         if (!fAllowNew)
             return false;
 
-        const char* pszTimestamp = "247 LOVE!!";
+        const char* pszTimestamp = "247 LOVE!";
         CTransaction txNew;
-        txNew.nTime = 1406919510;
+        txNew.nTime = 1407409670;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2494,9 +2494,9 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1406919510;
+        block.nTime    = 1407409670;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 426712;
+        block.nNonce   = 425814;
 		if(fTestNet)
         {
             block.nNonce   = 0;
@@ -2523,7 +2523,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nNonce = %u \n", block.nNonce);
 
         //// debug print
-        assert(block.hashMerkleRoot == uint256("0x05542e1d2ada33fec7e2faed89dece0c21d3ab161a8e7d6234614d74b483bed9"));
+        assert(block.hashMerkleRoot == uint256("0xd79f5309bb505a3f6fda8ac0afc282664435a053da1da6e5df9f95936e03707b"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());

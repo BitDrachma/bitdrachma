@@ -37,8 +37,8 @@ static const unsigned int MAX_INV_SZ = 50000;
 static const int64_t MIN_TX_FEE = 1000;
 static const int64_t MIN_RELAY_TX_FEE = MIN_TX_FEE;
 static const int64_t MAX_MONEY = 2000000000 * COIN;
-static const int64_t COIN_YEAR_REWARD = 5 * CENT; // 1% Every 60 days
-static const int64_t MAX_MINT_PROOF_OF_STAKE = 0.05 * COIN;	// 1% interest Every 60 days
+static const int64_t COIN_YEAR_REWARD = 100 * CENT; // 1% Every 60 days
+static const int64_t MAX_MINT_PROOF_OF_STAKE = 2 * COIN;	// 1% interest Every 60 days
 static const int MODIFIER_INTERVAL_SWITCH = 1;
 
 inline bool MoneyRange(int64_t nValue) { return (nValue >= 0 && nValue <= MAX_MONEY); }
@@ -51,7 +51,7 @@ static const int fHaveUPnP = true;
 static const int fHaveUPnP = false;
 #endif
 
-static const uint256 hashGenesisBlock("0x000002d28c32637c3dff09cfdae7dbabaddf2de7e1dbc2e7c05d77969f954471");
+static const uint256 hashGenesisBlock("0x000009deacc4ba3dadae8b16b347905f50f0a4413f7fdbb48e1c93d7341b0a91");
 static const uint256 hashGenesisBlockTestNet("0x");
 inline int64_t PastDrift(int64_t nTime)   { return nTime - 10 * 60; } // up to 10 minutes from the past
 inline int64_t FutureDrift(int64_t nTime) { return nTime + 10 * 60; } // up to 10 minutes from the future
