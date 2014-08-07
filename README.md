@@ -8,10 +8,10 @@ anonymity resource, Librexcoin sources include the zerocoin library for native z
 
 <h2><strong>Technical Specifications</strong></h2>
 Algorithm: X11 | proof-of-work + proof-of-stake<br>
-Total coins: 5 Million<br>
+Total coins: 10 Million<br>
 Block time: 60 seeconds<br>
 Difficulty retarget: every block<br>
-Block Reward: 1 DRA ₯<br>
+Block Reward: 2 DRA ₯<br>
 Min transaction fee: 0.00001 DRA ₯ (Fees are paid to miners)<br>
 Nominal stake interest: 5% annually<br>
 Min stake age: 1 hour, no max age<br>
